@@ -1,5 +1,5 @@
 #
-#  Copyright 2002 yafra.org
+#  Copyright 2015 yafra.org
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -25,9 +25,9 @@ MAINTAINER Martin Weber <info@yafra.org>
 # Install common packages
 RUN \
   apt-get update && \
-  apt-get upgrade -y && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential git
-  apt-get autoremove -y && \
+  apt-get upgrade -yq && \
+  DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential git
+  apt-get autoremove -yq && \
   apt-get clean all
 
 # Create yafra directories
