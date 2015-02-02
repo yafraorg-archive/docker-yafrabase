@@ -24,13 +24,25 @@ MAINTAINER Martin Weber <info@yafra.org>
 
 # Install common packages
 RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
-  apt-get upgrade -yq && \
-  DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential git curl doxygen && \
+  apt-get -yq upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y curl git htop man unzip vim-nox wget doxygen && \
   apt-get autoremove -yq && \
-  apt-get clean all
+  apt-get clean all && \
+  rm -rf /var/lib/apt/lists/*
 
 # Create yafra directories
 RUN mkdir -p /work/repos && mkdir -p /work/yafra-runtime
 
-#ENV AUTHORIZED_KEYS **None**
+# Add files.
+#ADD root/.bashrc /root/.bashrc
+#ADD root/.gitconfig /root/.gitconfig
+
+# Set environment variables.
+#ENV HOME /root
+
+# Define working directory.
+#WORKDIR /root
