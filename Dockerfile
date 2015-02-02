@@ -26,7 +26,7 @@ MAINTAINER Martin Weber <info@yafra.org>
 RUN \
   apt-get update && \
   apt-get upgrade -yq && \
-  DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential git
+  DEBIAN_FRONTEND=noninteractive apt-get -yq install build-essential git curl doxygen && \
   apt-get autoremove -yq && \
   apt-get clean all
 
