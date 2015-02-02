@@ -37,12 +37,7 @@ RUN \
 # Create yafra directories
 RUN mkdir -p /work/repos && mkdir -p /work/yafra-runtime
 
-# Add files.
-#ADD root/.bashrc /root/.bashrc
-#ADD root/.gitconfig /root/.gitconfig
-
-# Set environment variables.
-#ENV HOME /root
-
-# Define working directory.
-#WORKDIR /root
+# Add root home
+ADD root/.bashrc /root/.bashrc
+ENV HOME /root
+WORKDIR /root
