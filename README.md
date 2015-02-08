@@ -19,7 +19,10 @@ sudo docker run -t -p 192.168.9.1:80:80 -i yafraorg/docker-yafrabase /bin/bash
  * [Perl](https://github.com/yafraorg/docker-yafraperl) @ [Docker Hub](https://registry.hub.docker.com/u/yafraorg/docker-yafraperl/)
  * [C](https://github.com/yafraorg/docker-yafrac) @ [Docker Hub](https://registry.hub.docker.com/u/yafraorg/docker-yafrac/)
  * [.net](https://github.com/yafraorg/docker-yafranet) @ [Docker Hub](https://registry.hub.docker.com/u/yafraorg/docker-yafranet/)
+
+### Specific images
  * [Database](https://github.com/yafraorg/docker-yafradb) @ [Docker Hub](https://registry.hub.docker.com/u/yafraorg/docker-yafradb/)
+ * Messaging / RabbitMQ @ [Docker Hub](https://registry.hub.docker.com/u/dockerfile/rabbitmq/)
 
 Get all dockers via
 ```bash
@@ -32,14 +35,14 @@ docker pull yafraorg/docker-yafrac
 docker pull yafraorg/docker-yafrajava
 docker pull yafraorg/docker-yafraperl
 docker pull yafraorg/docker-yafranet
+
 docker pull yafraorg/docker-yafradb:mysql
 docker pull yafraorg/docker-yafradb:postgress
 docker pull yafraorg/docker-yafradb:mongodb
 docker pull yafraorg/docker-yafradb:dataonly
 ```
  
-## Source examples for those images
-See [yafra.org github repositories starting with yafra-](https://github.com/yafraorg) for source examples. All examples are based eith on SQL or noSQL (mongoDB) databases.
-
-See [yafra.org wiki](https://github.com/yafraorg/yafra/wiki) for more information.
-
+# Yafra links
+* [Wiki](https://github.com/yafraorg/yafra/wiki)
+* [Dcoker usage](https://github.com/yafraorg/yafra/wiki/Docker)
+* [Projects](https://github.com/yafraorg/yafra/wiki/Projects)
