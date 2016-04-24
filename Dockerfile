@@ -27,6 +27,8 @@ apk upgrade && \
 apk add bash git openrc && \
 rm -rf /var/lib/apt/lists/*
 
+RUN cd && echo "alias ll='ls -la'" > .bashrc && echo "set -o vi" >> .bashrc
+
 RUN openrc
 
 RUN mkdir -p /work/repos
