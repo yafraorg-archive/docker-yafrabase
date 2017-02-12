@@ -18,7 +18,7 @@
 #
 
 # source is docker's alpine
-FROM alpine:3.3
+FROM alpine:3.5
 
 MAINTAINER Martin Weber <info@yafra.org>
 
